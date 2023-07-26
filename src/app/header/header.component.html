@@ -1,0 +1,44 @@
+<div class="sticky-header">
+  <div class="shipping-label">
+    <p>Free shipping all over india</p>
+  </div>
+  <nav class="header-container">
+    <div class="header-links">
+      <ul>
+        <li
+          (mouseenter)="handleShowDropSown(true)"
+          (mouseleave)="handleShowDropSown(false)"
+        >
+          SHOP
+        </li>
+        <li>JOURNAL</li>
+        <li>ABOUT</li>
+      </ul>
+    </div>
+    <div class="header-title">
+      <h1>ZORO</h1>
+    </div>
+    <div class="header-icons">
+      <img src="assets/icons/search.svg" alt="" />
+      <img src="assets/icons/heart.svg" alt="" />
+      <img src="assets/icons/user.svg" alt="" />
+      <img src="assets/icons/bag.svg" alt="" />
+    </div>
+  </nav>
+</div>
+<div
+  (mouseenter)="handleShowDropSown(true)"
+  (mouseleave)="handleShowDropSown(false)"
+  class="shop-dropdown"
+>
+  <div *ngFor="let items of category" class="category">
+    <span> {{ items.categoryName }}</span>
+    <ul>
+      <li *ngFor="let name of items.categoryItems">{{ name }}</li>
+    </ul>
+  </div>
+  <div class="sample-image">
+    <img src="assets/images/headerPic1.png" alt="" />
+    <img src="assets/images/headerPic2.png" alt="" />
+  </div>
+</div>
