@@ -23,27 +23,26 @@
   </div>
 
   <div class="new-collection-container">
-    <app-title [title]="'New Collection'" ></app-title>
+    <app-title [marginBottom]="30" [title]="'New Collection'"></app-title>
     <div>
       <div
         *ngFor="let collection of collectionInfo"
         [ngStyle]="{ 'background-image': 'url(' + collection.url + ')' }"
       >
-      <section>
-        <h1>{{ collection.category }}</h1>
-        <a routerLink=""> SHOP NOW </a>
-      </section>
+        <section>
+          <h1>{{ collection.category }}</h1>
+          <a routerLink=""> SHOP NOW </a>
+        </section>
         <div class="overlay"></div>
       </div>
     </div>
   </div>
 
-
-  <div class="new-arrival" >
+  <div class="new-arrival">
     <app-title [title]="'New Arrivals'"></app-title>
     <a routerLink="">VIEW ALL </a>
-    <!-- {{newArrivals | json}} -->
-    <!-- <img *ngFor="let image of newArrivals" [src]="image.image" [alt]="image.alt"> -->
-    <app-product-card></app-product-card>
+    <div  >
+      <app-product-card *ngFor="let product of newArrivals" [productName]="product.name" [productImagePath]="product.image" [productImageALT]="product.alt" [productPrice]="product.price" ></app-product-card>
+    </div>
   </div>
 </div>

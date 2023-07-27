@@ -1,0 +1,51 @@
+.product-card {
+  text-align: start;
+
+  div {
+    height: 70vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+
+    .bag-icon {
+      height: 60px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      background-color: white;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+
+    .heart-icon {
+      position: absolute;
+      width: 20px;
+      right: 20px;
+      top: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+  }
+
+  div:hover .bag-icon {
+    opacity: 1;
+  }
+
+  div:hover .heart-icon {
+    opacity: 1;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 2.5;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
