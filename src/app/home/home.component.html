@@ -1,9 +1,49 @@
 <div>
-  <div class="banner" >
-    <h1 >Essentials for <br> a cold winter </h1>
+  <div class="banner">
+    <h1>
+      Essentials for <br />
+      a cold winter
+    </h1>
     <p>Discover Autumn Winter 2021</p>
     <button>
       <div class="layer"></div>
-      SHOP NOW </button>
+      SHOP NOW
+    </button>
+  </div>
+
+  <div class="about1">
+    <p>
+      THIS IS A DEMONSTRATION OF THE SYDNEY THEME FOR VERSE BY
+      <span class="gold-text"> MATTER DESIGN. </span>
+    </p>
+    <p>
+      WEAR BY <span class="gold-text"> SUNSPEL</span> AND
+      <span class="gold-text"> SCOTCH&SODA</span>
+    </p>
+  </div>
+
+  <div class="new-collection-container">
+    <app-title [title]="'New Collection'" ></app-title>
+    <div>
+      <div
+        *ngFor="let collection of collectionInfo"
+        [ngStyle]="{ 'background-image': 'url(' + collection.url + ')' }"
+      >
+      <section>
+        <h1>{{ collection.category }}</h1>
+        <a routerLink=""> SHOP NOW </a>
+      </section>
+        <div class="overlay"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="new-arrival" >
+    <app-title [title]="'New Arrivals'"></app-title>
+    <a routerLink="">VIEW ALL </a>
+    <!-- {{newArrivals | json}} -->
+    <!-- <img *ngFor="let image of newArrivals" [src]="image.image" [alt]="image.alt"> -->
+    <app-product-card></app-product-card>
   </div>
 </div>
