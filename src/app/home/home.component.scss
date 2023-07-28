@@ -150,14 +150,62 @@
 
   @media (max-width: 800px) {
     div {
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(2,1fr);
+
+    justify-content: space-between;
+
     }
   }
 
-  @media (max-width: 300px) {
+  @media (max-width: 470px) {
     div {
       grid-template-columns: 1fr
     }
   }
 
+}
+
+.highlight-container {
+  height: 80vh;
+  margin: 80px 0px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 100%;
+    margin-right: 50px;
+  }
+
+  div {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+    div {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      width: fit-content;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+
+      a {
+        // margin: 40px 0px;
+        color: #000;
+        font-size: 13px;
+      }
+
+      img{
+        height: 250px;
+        width: 200px;
+        margin-right: 0px !important;
+      }
+
+
+    }
+
+
+  }
 }

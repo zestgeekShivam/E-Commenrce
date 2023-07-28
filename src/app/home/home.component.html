@@ -39,10 +39,28 @@
   </div>
 
   <div class="new-arrival">
-    <app-title [title]="'New Arrivals'"></app-title>
+    <app-title  [title]="'New Arrivals'"></app-title>
     <a routerLink="">VIEW ALL </a>
-    <div  >
-      <app-product-card *ngFor="let product of newArrivals" [productName]="product.name" [productImagePath]="product.image" [productImageALT]="product.alt" [productPrice]="product.price" ></app-product-card>
+    <div>
+      <app-product-card
+        *ngFor="let product of newArrivals"
+        [productName]="product.name"
+        [productImagePath]="product.image"
+        [productImageALT]="product.alt"
+        [productPrice]="product.price"
+      ></app-product-card>
+    </div>
+  </div>
+
+  <div class="highlight-container">
+    <img src="assets/images/highlight.png" alt="" />
+    <div>
+      <div>
+        <app-title  [title]="'Luxury Knitwear'"></app-title>
+        <p>This soft lambswool jumper is knitted in Scotland, <br> using yarn from one of the world's oldest spinners <br>based in Fife </p>
+        <a routerLink=""> SHOP NOW </a>
+        <img src="assets/images/highlightmin.png" alt="">
+      </div>
     </div>
   </div>
 </div>
