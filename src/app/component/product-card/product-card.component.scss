@@ -2,12 +2,17 @@
   text-align: start;
 
   div {
-    height: 70vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     position: relative;
+    height: 400px;
+
+    .cover-img{
+      height: 100%;
+      width: 100%;
+    }
 
     .bag-icon {
       height: 60px;

@@ -8,8 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { TitleComponent } from './component/title/title.component';
 import { GetProductService } from './services/get-product.service';
 import { ProductCardComponent } from './component/product-card/product-card.component';
+import { JournalCardComponent } from './component/journal-card/journal-card.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, TitleComponent, ProductCardComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, TitleComponent, ProductCardComponent, JournalCardComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [GetProductService],
   bootstrap: [AppComponent],

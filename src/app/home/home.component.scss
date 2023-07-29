@@ -107,6 +107,8 @@
           color: white;
           font-size: 16px;
           letter-spacing: 1px;
+          text-decoration: none;
+          border-bottom: 1px solid white;
         }
       }
     }
@@ -127,15 +129,26 @@
 
 }
 
+.new-arrival-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .new-arrival {
   margin-top: 50px;
   text-align: center;
+  width: 100%;
+  max-width: 1300px;
 
   a {
     color: #000;
     font-size: 16px;
     letter-spacing: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #000
   }
 
   div {
@@ -144,15 +157,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    justify-content: space-between;
+    // justify-content: space-between;
 
   }
 
   @media (max-width: 800px) {
     div {
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
 
-    justify-content: space-between;
+      justify-content: space-between;
 
     }
   }
@@ -195,9 +208,11 @@
         // margin: 40px 0px;
         color: #000;
         font-size: 13px;
+        text-decoration: none;
+        border-bottom: 1px solid #000;
       }
 
-      img{
+      img {
         height: 250px;
         width: 200px;
         margin-right: 0px !important;
@@ -207,5 +222,67 @@
     }
 
 
+  }
+}
+
+.banner2 {
+  min-height: 80vh;
+  background-image: url('/assets/images/banner2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    font-weight: 100;
+    font-size: 3.3rem;
+  }
+
+  div {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 50px;
+
+    a {
+      color: white;
+      font-size: 13px;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+      font-weight: bold;
+    }
+
+  }
+
+}
+
+.about {
+  height: 50vh;
+  background: #fcfaf6;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  div {
+    width: 60%;
+
+    p {
+      font-size: 30px;
+    }
   }
 }
