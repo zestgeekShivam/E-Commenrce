@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GetProductService } from '../services/get-product.service';
+import { GetBlogsService } from '../services/get-blogs.service';
 
 @Component({
   selector: 'app-home',
@@ -26,6 +27,17 @@ export class HomeComponent {
     },
   ];
 
-  constructor(private getProduct: GetProductService) {}
+  socialImagePath: string[] = [
+    'assets/images/social/socialMedia1.png',
+    'assets/images/social/socialMedia2.png',
+    'assets/images/social/socialMedia3.png',
+    'assets/images/social/socialMedia4.png',
+  ];
+
+  constructor(
+    private getProduct: GetProductService,
+    private getBlogs: GetBlogsService
+  ) {}
   newArrivals = this.getProduct.getProduct(3, 'men');
+  blogs = this.getBlogs.generateMockBlogData(3);
 }

@@ -9,8 +9,9 @@ import { TitleComponent } from './component/title/title.component';
 import { GetProductService } from './services/get-product.service';
 import { ProductCardComponent } from './component/product-card/product-card.component';
 import { JournalCardComponent } from './component/journal-card/journal-card.component';
+import { AttributeGridComponent } from './component/attribute-grid/attribute-grid.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, TitleComponent, ProductCardComponent, JournalCardComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, TitleComponent, ProductCardComponent, JournalCardComponent, AttributeGridComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [GetProductService],
   bootstrap: [AppComponent],

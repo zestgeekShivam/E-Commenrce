@@ -38,37 +38,40 @@
     </div>
   </div>
 
-  <div class="new-arrival-container" >
-  <div class="new-arrival">
-    <app-title  [title]="'New Arrivals'"></app-title>
-    <a routerLink="">VIEW ALL </a>
-    <div>
-      <app-product-card
-        *ngFor="let product of newArrivals"
-        [productName]="product.name"
-        [productImagePath]="product.image"
-        [productImageALT]="product.alt"
-        [productPrice]="product.price"
-      ></app-product-card>
+  <div class="new-arrival-container">
+    <div class="new-arrival">
+      <app-title [title]="'New Arrivals'"></app-title>
+      <a routerLink="">VIEW ALL </a>
+      <div>
+        <app-product-card
+          *ngFor="let product of newArrivals"
+          [productName]="product.name"
+          [productImagePath]="product.image"
+          [productImageALT]="product.alt"
+          [productPrice]="product.price"
+        ></app-product-card>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="highlight-container">
     <img src="assets/images/highlight.png" alt="" />
     <div>
       <div>
-        <app-title  [title]="'Luxury Knitwear'"></app-title>
-        <p>This soft lambswool jumper is knitted in Scotland, <br> using yarn from one of the world's oldest spinners <br>based in Fife </p>
+        <app-title [title]="'Luxury Knitwear'"></app-title>
+        <p>
+          This soft lambswool jumper is knitted in Scotland, <br />
+          using yarn from one of the world's oldest spinners <br />based in Fife
+        </p>
         <a routerLink=""> SHOP NOW </a>
-        <img src="assets/images/highlightmin.png" alt="">
+        <img src="assets/images/highlightmin.png" alt="" />
       </div>
     </div>
   </div>
 
   <div class="banner2">
     <h1>
-      -50% off <br>
+      -50% off <br />
       All Essentials
     </h1>
     <div>
@@ -80,8 +83,55 @@
   <div class="about">
     <p>ABOUT ZORO</p>
     <div>
-      <p>“We believe in two things: the pursuit of quality in everything we do, and looking after one another. Everything else should take care of itself.”</p>
+      <p>
+        “We believe in two things: the pursuit of quality in everything we do,
+        and looking after one another. Everything else should take care of
+        itself.”
+      </p>
     </div>
+  </div>
+
+  <div class="journal-container">
+    <app-title [title]="'Journal'"></app-title>
+    <p class="sub-title">Notes on life and style</p>
+    <div>
+      <app-journal-card
+        *ngFor="let blog of blogs"
+        [title]="blog.title"
+        [category]="blog.category"
+        [alt]="blog.alt"
+        [image]="blog.image"
+        [link]="blog.link"
+      ></app-journal-card>
+    </div>
+  </div>
+
+  <div class="banner3">
+    <div>
+      <h2>We are Sustainable</h2>
+      <p>
+        From caring for our land to supporting our people, discover the steps
+        we’re taking to do more for the world around us.
+      </p>
+      <button>
+        <div class="layer"></div>
+        READ MORE
+      </button>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="social-title">
+      <app-title [title]="'Styled by You'"></app-title>
+      <p>Tag @sydney to be featured.</p>
+    </div>
+    <div class="social-images" >
+      <img *ngFor="let path of socialImagePath" [src]="path" [alt]="path">
+    </div>
+  </div>
+
+  <div class="attribute" >
+    <app-attribute-grid></app-attribute-grid>
   </div>
 
 </div>
