@@ -1,0 +1,79 @@
+<div class="footer-container">
+  <div class="info-section">
+    <div class="grid-wrapper">
+      <div class="links">
+        <span>Info</span>
+        <ul>
+          <li>About Us</li>
+          <li>Journal</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="links">
+        <span>Support</span>
+        <ul>
+          <li>FAQ</li>
+          <li>Contact Us</li>
+          <li>Shipping & Returns</li>
+          <li>How to use this theme</li>
+        </ul>
+      </div>
+
+      <div class="newsletter">
+        <div>
+          <span>Newsletter</span>
+          <p>
+            Get 15% off your first purchase! Plus, be the first to know about
+            sales, new product launches and exclusive offers!
+          </p>
+          <div class="input-container">
+            <img src="assets/icons/arrow.svg" alt="" />
+            <input type="text" name="" placeholder="Email" />
+          </div>
+          <div class="icon-container">
+            <img src="assets/icons/youtube.svg" alt="youtube" />
+            <img src="assets/icons/instagram.svg" alt="instagram" />
+            <img src="assets/icons/facebook.svg" alt="facebook" />
+            <img src="assets/icons/twiter.svg" alt="twiter" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-section">
+    <div class="language-country">
+      <div class="country">
+        <span>Country/Region</span>
+        <select name="Countrsy/Region" id="cars">
+          <option
+            [value]="country.value"
+            [label]="country.label"
+            *ngFor="let country of config.currencyList"
+          ></option>
+        </select>
+        <img src="assets/icons/caret.svg" alt="" />
+      </div>
+      <div class="language">
+        <span>Language</span>
+        <select name="language" id="cars">
+          <option
+            [value]="language.value"
+            [label]="language.label"
+            *ngFor="let language of config.languageList"
+          ></option>
+        </select>
+        <img src="assets/icons/caret.svg" alt="" />
+      </div>
+    </div>
+
+    <div class="copyright-payment">
+      <div>
+        <img src="assets/images/amex.png" alt="" />
+        <img src="assets/images/master.png" alt="" />
+        <img src="assets/images/visa.png" alt="" />
+      </div>
+      <p>2023 (c) . Built by <a target="_blank" href="https://shivamonweb.netlify.app/">Shivam</a>. Powered by <a target="_blank" href="https://shivamonweb.netlify.app/">Shivam</a>.™</p>
+    </div>
+  </div>
+</div>

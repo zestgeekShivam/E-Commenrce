@@ -1,0 +1,156 @@
+.footer-container {
+  background: #383634;
+  height: 85vh;
+  color: white;
+
+  .info-section {
+    height: 70%;
+    margin: 0px 40px;
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: .25fr .25fr .5fr;
+      padding-top: 80px;
+
+      .links {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+
+      .newsletter {
+        display: flex;
+        justify-content: flex-end;
+
+        div {
+          max-width: 360px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          max-height: 200px;
+
+          span {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 14px;
+            margin: 20px 0px;
+          }
+
+          .input-container {
+            position: relative;
+
+            input {
+              padding: 10px;
+            }
+
+            input:focus {
+              outline: none;
+            }
+
+            img {
+              position: absolute;
+              left: 325px;
+              top: 12px;
+            }
+          }
+
+          .icon-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: 40px;
+            gap: 40px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+        }
+      }
+
+    }
+
+
+  }
+
+  .copyright-section {
+    height: 30%;
+    border-top: 1px solid #545250;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 20px;
+
+    .language-country {
+      display: flex;
+      gap: 20px;
+
+      span {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      select {
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 1px solid #545250;
+        color: white;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 12px 38px 12px 20px;
+        width: 180px;
+      }
+
+      select:focus {
+        outline: none;
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        img{
+          position: absolute;
+          left: 150px;
+          height: 20px;
+          width:  20px;
+          bottom: 2px;
+        }
+      }
+    }
+
+    .copyright-payment{
+      div{
+        display: flex;
+        height: 30px;
+        gap: 20px;
+        justify-content: flex-end;
+        img{
+          height: 15px;
+        }
+      }
+      p{
+      font-size: 12px;
+      }
+      a{
+        color: white;
+      }
+    }
+  }
+
+}
