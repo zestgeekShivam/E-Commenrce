@@ -25,6 +25,29 @@
           gap: 15px;
           font-size: 14px;
           cursor: pointer;
+          transition: border .3s ease-in-out;
+          li {
+            a {
+              color: white;
+              display: inline-block;
+              text-decoration: none;
+            }
+
+            a::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              background: #fff;
+              transition: width 0.3s ease-in-out;
+            }
+
+            a:hover::after {
+              width: 100%;
+            }
+          }
+
+
         }
       }
 
@@ -119,35 +142,40 @@
       select:focus {
         outline: none;
       }
-      div{
+
+      div {
         display: flex;
         flex-direction: column;
         gap: 10px;
         position: relative;
-        img{
+
+        img {
           position: absolute;
           left: 150px;
           height: 20px;
-          width:  20px;
+          width: 20px;
           bottom: 2px;
         }
       }
     }
 
-    .copyright-payment{
-      div{
+    .copyright-payment {
+      div {
         display: flex;
         height: 30px;
         gap: 20px;
         justify-content: flex-end;
-        img{
+
+        img {
           height: 15px;
         }
       }
-      p{
-      font-size: 12px;
+
+      p {
+        font-size: 12px;
       }
-      a{
+
+      a {
         color: white;
       }
     }

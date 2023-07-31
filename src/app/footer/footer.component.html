@@ -1,22 +1,13 @@
 <div class="footer-container">
   <div class="info-section">
     <div class="grid-wrapper">
-      <div class="links">
-        <span>Info</span>
-        <ul>
-          <li>About Us</li>
-          <li>Journal</li>
-          <li>Privacy Policy</li>
-        </ul>
-      </div>
 
-      <div class="links">
-        <span>Support</span>
+      <div *ngFor="let footer of config.footerLinks" class="links">
+        <span>{{footer.subTitle}}</span>
         <ul>
-          <li>FAQ</li>
-          <li>Contact Us</li>
-          <li>Shipping & Returns</li>
-          <li>How to use this theme</li>
+          <li *ngFor="let link of footer.links " >
+            <a href="">{{link.text}}</a>
+          </li>
         </ul>
       </div>
 
@@ -45,7 +36,7 @@
     <div class="language-country">
       <div class="country">
         <span>Country/Region</span>
-        <select name="Countrsy/Region" id="cars">
+        <select name="Country/Region" id="cars">
           <option
             [value]="country.value"
             [label]="country.label"

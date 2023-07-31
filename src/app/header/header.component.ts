@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import Config from '../services/config.json';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -31,7 +31,7 @@ export class HeaderComponent {
       categoryItems: ['Caps & Scarves', 'Bags'],
     },
   ];
-
+  config = Config;
   isShowDropdown = false;
 
   handleShowDropSown(show: boolean) {

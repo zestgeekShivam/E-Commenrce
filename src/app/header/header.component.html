@@ -31,10 +31,10 @@
   (mouseleave)="handleShowDropSown(false)"
   class="shop-dropdown"
 >
-  <div *ngFor="let items of category" class="category">
-    <span> {{ items.categoryName }}</span>
+  <div *ngFor="let items of config.headerCategory" class="category">
+    <span> {{ items.categoryLabel }}</span>
     <ul>
-      <li *ngFor="let name of items.categoryItems">{{ name }}</li>
+      <li *ngFor="let name of items.submenu">{{name.menuLabel }}</li>
     </ul>
   </div>
   <div class="sample-image">
