@@ -34,7 +34,7 @@ export class HeaderComponent {
   config = Config;
   isShowDropdown = false;
 
-  handleShowDropSown(show: boolean) {
+  handleShowDropSown(show: boolean): void {
     let element = document.getElementsByClassName('shop-dropdown')[0];
     if (show) {
       element.classList.add('show');
@@ -42,5 +42,15 @@ export class HeaderComponent {
       element.classList.remove('show');
     }
     this.isShowDropdown = show;
+  }
+
+  mobileMenu: boolean = false;
+  mobileMenuIcon: string = 'assets/icons/burger.svg';
+
+  handleNavMenuIcon() {
+    this.mobileMenu = !this.mobileMenu;
+    this.mobileMenuIcon = this.mobileMenu
+      ? 'assets/icons/cross.svg'
+      : 'assets/icons/burger.svg';
   }
 }

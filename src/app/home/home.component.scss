@@ -203,6 +203,7 @@
       align-items: center;
       gap: 30px;
       height: 100%;
+      width: 100%;
 
       a {
         // margin: 40px 0px;
@@ -224,6 +225,7 @@
 
   }
 }
+
 
 .banner2 {
   min-height: 80vh;
@@ -282,7 +284,7 @@
     width: 60%;
 
     p {
-    font-size: 25px;
+      font-size: 25px;
     }
   }
 }
@@ -295,11 +297,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    padding: 40px;
+    padding: 0px 10px ;
+    cursor: pointer;
   }
 
   .sub-title {
     margin-top: 10px;
+    margin-bottom: 20px;
   }
 
 }
@@ -357,7 +361,7 @@
 }
 
 .social {
-  margin-top: 80px ;
+  margin-top: 80px;
   text-align: center;
 
   .social-title {
@@ -378,7 +382,28 @@
     }
   }
 }
-.attribute{
-  padding:  90px 0px;
+
+.attribute {
+  padding: 90px 0px;
   background: #fcfaf6;
+}
+
+@media(max-width:800px) {
+  .highlight-container {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+
+    img {
+      width: 300px;
+      margin-right: 0px
+    }
+  }
+
+  .journal-container{
+    div{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
 }

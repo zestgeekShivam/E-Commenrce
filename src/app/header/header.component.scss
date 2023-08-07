@@ -5,12 +5,10 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1.5px 0px;
-  // background: blue;
 }
 
 .header-links {
   height: 100%;
-
   ul {
     list-style-type: none;
     display: flex;
@@ -30,6 +28,9 @@
       border-radius: 1px;
       transition: border .2s ease-in-out;
     }
+  }
+  img{
+    display: none;
   }
 }
 
@@ -109,4 +110,26 @@
 .show {
   opacity: 1;
   visibility: visible;
+}
+
+
+@media (max-width: 800px) {
+
+  .header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 20px;
+      width: 20px;
+      display: block;
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  .big-screen-icon{
+    display: none;
+  }
 }

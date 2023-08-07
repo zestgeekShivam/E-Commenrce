@@ -14,14 +14,17 @@
         <li>JOURNAL</li>
         <li>ABOUT</li>
       </ul>
+      <img (click)="handleNavMenuIcon()" [src]="mobileMenuIcon" alt="">
     </div>
     <div class="header-title">
       <h1>ZORO</h1>
     </div>
     <div class="header-icons">
       <img src="assets/icons/search.svg" alt="" />
-      <img src="assets/icons/heart.svg" alt="" />
-      <img src="assets/icons/user.svg" alt="" />
+      <div class="big-screen-icon" >
+        <img src="assets/icons/heart.svg" alt="" />
+        <img src="assets/icons/user.svg" alt="" />
+      </div>
       <img src="assets/icons/bag.svg" alt="" />
     </div>
   </nav>
